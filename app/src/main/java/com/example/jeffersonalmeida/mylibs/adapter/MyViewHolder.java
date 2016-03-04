@@ -24,4 +24,5 @@ public class MyViewHolder extends RecyclerView.ViewHolder {
     public ImageView getImageVideo() {
         return imageVideo;
     }
+
 }

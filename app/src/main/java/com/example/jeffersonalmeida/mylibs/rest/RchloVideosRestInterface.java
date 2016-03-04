@@ -10,9 +10,9 @@ import retrofit2.http.GET;
 /**
  * Created by jefferson on 23/02/16.
  */
-public interface RestInterface {
+public interface RchloVideosRestInterface {
 
     @GET("app/json/json-tv-riachuelo.aspx")
-    Call<List<Video>> videos();
+    Call<List<Video>> downloadVideos();
 
 }

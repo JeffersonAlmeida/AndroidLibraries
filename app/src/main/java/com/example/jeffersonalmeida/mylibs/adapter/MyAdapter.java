@@ -10,8 +10,11 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.example.jeffersonalmeida.mylibs.R;
 import com.example.jeffersonalmeida.mylibs.model.Video;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
  * Created by jeffersonalmeida on 3/4/16.
@@ -41,10 +44,10 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         Video video = videos.get(position);
         String imagemURL = video.getImagem();
         ImageView imageVideo = holder.getImageVideo();
+
         Glide
                 .with(context)
                 .load(imagemURL)
-                .centerCrop()
                 .crossFade()
                 .into(imageVideo);
 
@@ -58,5 +61,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void addMoreVideos( List<Video> videos ){
         this.videos.addAll(videos);
         notifyDataSetChanged();
+    }
+
+    public List<Video> getVideos() {
+        return videos;
     }
 }

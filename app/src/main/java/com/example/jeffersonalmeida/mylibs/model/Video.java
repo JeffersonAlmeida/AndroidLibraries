@@ -1,9 +1,11 @@
 package com.example.jeffersonalmeida.mylibs.model;
 
+import java.io.Serializable;
+
 /**
  * Created by jeffersonalmeida on 3/4/16.
  */
-public class Video {
+public class Video implements Serializable {
 
     private long id;
     private String categoria;
